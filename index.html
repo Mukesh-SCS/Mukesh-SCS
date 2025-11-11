@@ -5,155 +5,589 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mukesh Mani Tripathi - Resume</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
-        nav {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        nav ul {
-            list-style: none;
+        * {
+            margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        /* Header and Navigation */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            padding: 30px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 20px;
+            font-size: 0.95em;
+            color: #555;
         }
-        nav ul li a {
+        
+        .contact-info a {
+            color: #667eea;
             text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
+            font-weight: 500;
+            transition: color 0.3s;
         }
-        nav ul li a:hover {
+        
+        .contact-info a:hover {
+            color: #764ba2;
             text-decoration: underline;
         }
-        h1, h2 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
+        
+        .contact-separator {
+            color: #ddd;
         }
+        
+        /* Navigation */
+        nav {
+            background-color: #f8f9fa;
+            padding: 15px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        
+        nav ul li a:hover {
+            color: #764ba2;
+            background-color: #e8eaf6;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
         .section {
-            background-color: #f0f0f0;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+        
+        .objective {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        /* Education Section */
+        .education-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .education-item:last-child {
+            border-bottom: none;
+        }
+        
+        .degree-title {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .school-name {
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        .graduation-date {
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .job-title {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .company-date {
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .experience-item ul {
+            padding-left: 20px;
+        }
+        
+        .experience-item li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        /* Certifications */
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .cert-item {
+            background: #f8f9fa;
             padding: 15px;
             border-radius: 5px;
-            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            font-weight: 500;
         }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
+        
+        .cert-in-progress {
+            color: #ff9800;
+            font-size: 0.85em;
+            font-weight: 600;
         }
-        .contact-info p {
-            margin: 5px 0;
+        
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
         }
+        
+        .project-title {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 10px;
+        }
+        
+        .project-description {
+            line-height: 1.7;
+        }
+        
+        /* Lists */
         ul {
             padding-left: 20px;
         }
+        
         li {
             margin-bottom: 10px;
         }
+        
         .highlight {
-            color: #00bcd4;
-            font-weight: bold;
+            color: #667eea;
+            font-weight: 600;
         }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            main {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
         @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+            
             nav ul {
                 flex-direction: column;
                 gap: 10px;
             }
+            
             body {
-                padding: 10px;
+                padding: 0;
+            }
+            
+            main {
+                margin: 0;
+                border-radius: 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="contact-info">
-        <h1>Mukesh Mani Tripathi</h1>
-        <p><a href="mailto:mtripathi@students.towson.edu">mtripathi@students.towson.edu</a> | 608-xxx-xxx | Towson, MD 20876 | <a href="www.linkedin.com/in/mukesh-mani-tripathi" target="_blank">LinkedIn</a></p>
-    </div>
+    <header>
+        <div class="header-content">
+            <h1>Mukesh Mani Tripathi</h1>
+            <div class="contact-info">
+                <a href="mailto:mtripathi@students.towson.edu">mtripathi@students.towson.edu</a>
+                <span class="contact-separator">|</span>
+                <span>608-xxx-xxx</span>
+                <span class="contact-separator">|</span>
+                <span>Towson, MD 20876</span>
+                <span class="contact-separator">|</span>
+                <a href="https://www.linkedin.com/in/mukesh-mani-tripathi" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#objective">Objective</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#involvement">Involvement</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="section">
-        <h2>Objective</h2>
-        <p>Dedicated and detail-oriented graduate student in the M.S. Computer Science - Cybersecurity program at Towson University, seeking a cybersecurity position to leverage expertise in threat analysis, vulnerability assessment, and network security. Committed to enhancing organizational security through strong problem-solving, communication, and technical skills, while contributing to a collaborative and secure environment.</p>
-    </div>
+    <main>
+        <!-- Objective Section -->
+        <section class="section" id="objective">
+            <h2>Objective</h2>
+            <div class="objective">
+                <p>Dedicated and detail-oriented graduate student in the M.S. Computer Science - Cybersecurity program at Towson University, seeking a cybersecurity position to leverage expertise in threat analysis, vulnerability assessment, and network security. Committed to enhancing organizational security through strong problem-solving, communication, and technical skills, while contributing to a collaborative and secure environment.</p>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Education</h2>
-        <p><span class="highlight">Towson University - Towson, MD</span><br>
-        Master of Science in Computer Science - Cybersecurity<br>
-        Expected Graduation: May 2027</p>
-        <p><span class="highlight">University of Wisconsin at Platteville, WI</span><br>
-        Bachelor of Science in Computer Science<br>
-        Graduated: May 2023</p>
-        <p><span class="highlight">North Lake College - Irving, TX</span><br>
-        Associate of Science, Diploma<br>
-        Graduated: May 2021</p>
-    </div>
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="school-name">Towson University - Towson, MD</div>
+                <div class="degree-title">Master of Science in Computer Science - Cybersecurity</div>
+                <div class="graduation-date">Expected Graduation: May 2027</div>
+            </div>
 
-    <div class="section">
-        <h2>Leadership and Involvement</h2>
-        <ul>
-            <li><span class="highlight">Student Blog Contributor</span>: Published monthly articles on Java and Python for the student tech blog.</li>
-            <li><span class="highlight">Student Programming Group - Member</span> (2019-2021)</li>
-            <li><span class="highlight">International Student Club - Secretary</span> (2021-2022): Coordinated meetings, managed communications, and supported cultural events.</li>
-            <li><span class="highlight">Teaching & Technology Media Services - Production Assistant</span> (2021-2022): Provided media and tech support for educational content and classroom technology.</li>
-        </ul>
-    </div>
+            <div class="education-item">
+                <div class="school-name">University of Wisconsin at Platteville - Platteville, WI</div>
+                <div class="degree-title">Bachelor of Science in Computer Science</div>
+                <div class="graduation-date">Graduated: May 2023</div>
+            </div>
 
-    <div class="section">
-        <h2>Experience</h2>
-        <p><span class="highlight">RFA Engineering (Client: John Deere) - Embedded Software Engineer</span><br>
-        June 2023 - Dec 2024</p>
-        <ul>
-            <li>Designed, tested, and documented embedded systems for construction machines using C, C++, MATLAB, and Simulink.</li>
-            <li>Collaborated in Agile teams and managed software builds using Jenkins and CI pipelines.</li>
-            <li>Delivered high-impact features such as Blade Control, Grade Control, and IMU Calibration.</li>
-            <li>Mentored peers by enhancing onboarding materials and providing hands-on machine training.</li>
-            <li>Troubleshooting and debugging using unit tests, vehicle simulators, and bench testing of controllers with hardware in the loop.</li>
-            <li>Migrated the software build Jenkins pipeline for the repositories of various machine generations to new servers.</li>
-            <li>Supported team presentations and status reporting to internal stakeholders.</li>
-        </ul>
-    </div>
+            <div class="education-item">
+                <div class="school-name">North Lake College - Irving, TX</div>
+                <div class="degree-title">Associate of Science, Diploma</div>
+                <div class="graduation-date">Graduated: May 2021</div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Certifications</h2>
-        <ul>
-            <li>CompTIA+ Security (In Progress)</li>
-            <li>IBM CyberSecurity (In Progress)</li>
-            <li>Embedded Tools and Software Development</li>
-            <li>Google Cybersecurity</li>
-            <li>Linux and SQL</li>
-            <li>Network Security</li>
-        </ul>
-    </div>
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-title">Embedded Software Engineer</div>
+                <div class="company-date"><span class="highlight">RFA Engineering (Client: John Deere)</span> | June 2023 - Dec 2024</div>
+                <ul>
+                    <li>Designed, tested, and documented embedded systems for construction machines using C, C++, MATLAB, and Simulink.</li>
+                    <li>Collaborated in Agile teams and managed software builds using Jenkins and CI pipelines.</li>
+                    <li>Delivered high-impact features such as Blade Control, Grade Control, and IMU Calibration.</li>
+                    <li>Mentored peers by enhancing onboarding materials and providing hands-on machine training.</li>
+                    <li>Troubleshot and debugged using unit tests, vehicle simulators, and bench testing of controllers with hardware in the loop.</li>
+                    <li>Migrated the software build Jenkins pipeline for the repositories of various machine generations to new servers.</li>
+                    <li>Supported team presentations and status reporting to internal stakeholders.</li>
+                </ul>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><span class="highlight">Programming</span>: C, MATLAB, Python, C++, JavaScript, Node.js, Bash</li>
-            <li><span class="highlight">Protocols</span>: CAN, J1939, XCP/CCP, LIN, SPI, I2C, MQTT</li>
-            <li><span class="highlight">Tools</span>: Git, GitHub, Jenkins, Visual Studio, Eclipse, CMake, GNU Make</li>
-            <li><span class="highlight">Testing & QA</span>: Unity, CMake, Simulink Test, Pytest, Cppcheck, Model Advisor</li>
-            <li><span class="highlight">Development</span>: Agile methodology, CI/CD pipelines, hardware-in-the-loop systems</li>
-            <li><span class="highlight">Cybersecurity Tools</span>: Wireshark, Nmap, Nessus, Burp Suite, Metasploit, OpenVAS</li>
-            <li><span class="highlight">Network Security</span>: Network traffic analysis, Firewall management, Intrusion detection, VPN configuration</li>
-        </ul>
-    </div>
+        <!-- Research Experience Section -->
+        <section class="section" id="research">
+            <h2>Research Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-title">Independent Research - Repair2Skill: Embodied AI for Robotic Furniture Repair</div>
+                <div class="company-date"><span class="highlight">Towson University</span> | May 2025 – Present</div>
+                <div style="color: #888; margin-bottom: 15px; font-weight: 500;">Advisor: Prof. Xin Huang</div>
+                <ul>
+                    <li>Developing an AI-powered repair planning system integrating MobileNet-based part detection and rule-based repair generation on Raspberry Pi 5.</li>
+                    <li>Implemented real-time image capture and detection using Pi Camera and PyTorch, enabling offline repair inference without external APIs.</li>
+                    <li>Integrated synthetic dataset generation, damage localization, and visual repair guide rendering.</li>
+                    <li>Automated Webots simulation through JSON-based robotic command output for UR5e robotic arm.</li>
+                    <li>Contributed to model optimization and quantization for embedded deployment.</li>
+                    <li><span class="highlight">Technologies:</span> Python, PyTorch, OpenCV, Raspberry Pi, Webots, YAML, Model Quantization</li>
+                </ul>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li><span class="highlight">Hospital Patient Management System (C#, MongoDB, Visual Studio)</span>: Developed a local app for scheduling, records, and billing with secure data handling.</li>
-            <li><span class="highlight">Real-Time Temperature Monitoring System (MATLAB, Arduino)</span>: Captured, logged, and visualized real-time data with threshold alerting.</li>
-            <li><span class="highlight">Low-Level Motor Control System (MATLAB, Simulink, Arduino)</span>: Built embedded system to manage motor behavior using feedback loops.</li>
-            <li><span class="highlight">Cybersecurity Vulnerability Assessment & Web Application Penetration Testing</span>: Conducted comprehensive vulnerability assessments on local networks and web applications to identify security flaws and recommend mitigation strategies. Tools: Nmap, Nessus, Wireshark, OpenVAS, Burp Suite, OWASP ZAP, Python</li>
-        </ul>
-    </div>
+        <!-- Technical Skills Section -->
+        <section class="section" id="skills">
+            <h2>Technical Skills</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Bash</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Protocols & Communication</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CAN</span>
+                        <span class="skill-tag">J1939</span>
+                        <span class="skill-tag">XCP/CCP</span>
+                        <span class="skill-tag">LIN</span>
+                        <span class="skill-tag">SPI</span>
+                        <span class="skill-tag">I2C</span>
+                        <span class="skill-tag">MQTT</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Development Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Visual Studio</span>
+                        <span class="skill-tag">Eclipse</span>
+                        <span class="skill-tag">CMake</span>
+                        <span class="skill-tag">GNU Make</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Testing & QA</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">CMake</span>
+                        <span class="skill-tag">Simulink Test</span>
+                        <span class="skill-tag">Pytest</span>
+                        <span class="skill-tag">Cppcheck</span>
+                        <span class="skill-tag">Model Advisor</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Development Practices</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Agile Methodology</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                        <span class="skill-tag">Hardware-in-the-Loop</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cybersecurity</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Nessus</span>
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag">OpenVAS</span>
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">Firewalls</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-title">Hospital Patient Management System</div>
+                <p class="project-description"><span class="highlight">Technologies:</span> C#, MongoDB, Visual Studio</p>
+                <p class="project-description">Developed a local application for scheduling, records management, and billing with secure data handling.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Real-Time Temperature Monitoring System</div>
+                <p class="project-description"><span class="highlight">Technologies:</span> MATLAB, Arduino</p>
+                <p class="project-description">Captured, logged, and visualized real-time data with threshold alerting capabilities.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Low-Level Motor Control System</div>
+                <p class="project-description"><span class="highlight">Technologies:</span> MATLAB, Simulink, Arduino</p>
+                <p class="project-description">Built embedded system to manage motor behavior using feedback loops and real-time control.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Cybersecurity Vulnerability Assessment & Web Application Penetration Testing</div>
+                <p class="project-description"><span class="highlight">Tools Used:</span> Nmap, Nessus, Wireshark, OpenVAS, Burp Suite, OWASP ZAP, Python</p>
+                <p class="project-description">Conducted comprehensive vulnerability assessments on local networks and web applications to identify security flaws and recommend mitigation strategies.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section" id="certifications">
+            <h2>Certifications</h2>
+            
+            <div class="cert-list">
+                <div class="cert-item">
+                    CompTIA+ Security <span class="cert-in-progress">(In Progress)</span>
+                </div>
+                <div class="cert-item">
+                    IBM CyberSecurity <span class="cert-in-progress">(In Progress)</span>
+                </div>
+                <div class="cert-item">
+                    Embedded Tools and Software Development
+                </div>
+                <div class="cert-item">
+                    Google Cybersecurity
+                </div>
+                <div class="cert-item">
+                    Linux and SQL
+                </div>
+                <div class="cert-item">
+                    Network Security
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership and Involvement Section -->
+        <section class="section" id="involvement">
+            <h2>Leadership & Involvement</h2>
+            
+            <ul>
+                <li><span class="highlight">Student Blog Contributor:</span> Published monthly articles on Java and Python for the student tech blog.</li>
+                <li><span class="highlight">Student Programming Group - Member</span> (2019-2021): Active participant in collaborative programming projects and workshops.</li>
+                <li><span class="highlight">International Student Club - Secretary</span> (2021-2022): Coordinated meetings, managed communications, and supported cultural events.</li>
+                <li><span class="highlight">Teaching & Technology Media Services - Production Assistant</span> (2021-2022): Provided media and tech support for educational content and classroom technology.</li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

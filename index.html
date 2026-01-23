@@ -4,393 +4,673 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mukesh Mani Tripathi - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --bg: #f8fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
-        
-        /* Header and Navigation */
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            z-index: -1;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Header */
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
         }
-        
+
         .header-content {
-            padding: 30px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 40px 30px;
             text-align: center;
         }
-        
+
         h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
-        
+
         .contact-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
             font-size: 0.95em;
-            color: #555;
+            color: var(--gray);
+            margin-top: 20px;
         }
-        
+
         .contact-info a {
-            color: #667eea;
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
-        
+
         .contact-info a:hover {
-            color: #764ba2;
-            text-decoration: underline;
+            color: var(--primary-dark);
+            transform: translateY(-2px);
         }
-        
+
+        .contact-info a i {
+            font-size: 0.9em;
+        }
+
         .contact-separator {
-            color: #ddd;
+            color: var(--gray-light);
         }
-        
+
         /* Navigation */
         nav {
-            background-color: #f8f9fa;
-            padding: 15px 40px;
-            border-bottom: 2px solid #667eea;
-            position: sticky;
-            top: 0;
-            z-index: 200;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+            padding: 0;
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
         }
-        
+
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 5px;
             flex-wrap: wrap;
             justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
         }
-        
+
         nav ul li a {
             text-decoration: none;
-            color: #667eea;
-            font-weight: 600;
+            color: var(--dark);
+            font-weight: 500;
             transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 3px;
+            padding: 10px 20px;
+            border-radius: 8px;
             display: inline-block;
+            font-size: 0.9em;
+            position: relative;
         }
-        
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gradient-2);
+            transition: width 0.3s ease;
+        }
+
         nav ul li a:hover {
-            color: white;
-            background-color: #667eea;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+            color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
         }
-        
+
+        nav ul li a:hover::before {
+            width: 70%;
+        }
+
         /* Main Content */
         main {
-            padding: 40px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 40px;
         }
-        
+
         .section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #f0f0f0;
+            margin-bottom: 60px;
+            animation: fadeInUp 0.6s ease-out;
         }
-        
-        .section:last-child {
-            border-bottom: none;
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: var(--dark);
+            position: relative;
             display: inline-block;
+            padding-bottom: 10px;
         }
-        
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-2);
+            border-radius: 2px;
+        }
+
         .objective {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-            border-left: 4px solid #667eea;
-            border-radius: 5px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
             font-size: 1.05em;
             line-height: 1.8;
+            border-left: 5px solid;
+            border-image: var(--gradient-2) 1;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        .objective::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
         /* Education Section */
         .education-item {
+            background: var(--white);
             margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
         }
-        
-        .education-item:last-child {
-            border-bottom: none;
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
         }
-        
+
         .degree-title {
-            color: #667eea;
+            color: var(--primary);
             font-weight: 700;
-            font-size: 1.1em;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
+
+        .degree-title::before {
+            content: '\f19d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-light);
+        }
+
         .school-name {
-            color: #2c3e50;
+            color: var(--dark);
             font-weight: 600;
-            font-size: 1.05em;
+            font-size: 1.1em;
+            margin-bottom: 5px;
         }
-        
+
         .graduation-date {
-            color: #888;
+            color: var(--gray);
             font-size: 0.95em;
-            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
         }
-        
+
+        .graduation-date::before {
+            content: '\f073';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 400;
+            color: var(--gray-light);
+        }
+
         /* Experience Section */
         .experience-item {
+            background: var(--white);
             margin-bottom: 30px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-            border-left: 4px solid #667eea;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 5px solid;
+            border-image: var(--gradient-2) 1;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
         .job-title {
-            color: #667eea;
+            color: var(--primary);
             font-weight: 700;
-            font-size: 1.1em;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
+
+        .job-title::before {
+            content: '\f0b1';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-light);
+            font-size: 0.9em;
+        }
+
         .company-date {
-            color: #888;
-            font-size: 0.95em;
-            margin-top: 5px;
-            margin-bottom: 15px;
+            color: var(--gray);
+            font-size: 1em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
         }
-        
+
+        .company-date::before {
+            content: '\f017';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 400;
+        }
+
         .experience-item ul {
-            padding-left: 20px;
+            padding-left: 25px;
+            list-style: none;
         }
-        
+
         .experience-item li {
-            margin-bottom: 8px;
-            line-height: 1.6;
+            margin-bottom: 12px;
+            line-height: 1.8;
+            position: relative;
+            padding-left: 25px;
         }
-        
+
+        .experience-item li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-light);
+            font-size: 0.7em;
+        }
+
         /* Skills Section */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
-        
+
         .skill-category {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            background: var(--white);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
         }
-        
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+
         .skill-category h3 {
-            color: #667eea;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
+
+        .skill-category h3::before {
+            content: '\f085';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-light);
+        }
+
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
         }
-        
+
         .skill-tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--gradient-2);
             color: white;
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.9em;
             font-weight: 500;
             display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
         }
-        
+
+        .skill-tag:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--shadow);
+        }
+
         /* Certifications */
         .cert-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            gap: 20px;
         }
-        
+
         .cert-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #667eea;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid;
+            border-image: var(--gradient-2) 1;
             font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
+
+        .cert-item::before {
+            content: '\f0a3';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary);
+            font-size: 1.2em;
+        }
+
+        .cert-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-lg);
+        }
+
         .cert-in-progress {
-            color: #ff9800;
+            color: var(--accent);
             font-size: 0.85em;
             font-weight: 600;
+            margin-left: auto;
+            padding: 4px 12px;
+            background: rgba(236, 72, 153, 0.1);
+            border-radius: 12px;
         }
-        
+
         /* Projects Section */
         .project-item {
+            background: var(--white);
             margin-bottom: 25px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
         }
-        
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+
         .project-title {
-            color: #667eea;
+            color: var(--primary);
             font-weight: 700;
-            font-size: 1.05em;
-            margin-bottom: 10px;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        
+
+        .project-title::before {
+            content: '\f07b';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-light);
+        }
+
         .project-description {
-            line-height: 1.7;
+            line-height: 1.8;
+            color: var(--gray);
         }
-        
+
         /* Lists */
         ul {
-            padding-left: 20px;
+            padding-left: 0;
+            list-style: none;
         }
-        
+
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
         }
-        
+
+        #involvement li::before {
+            content: '\f005';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-light);
+        }
+
         .highlight {
-            color: #667eea;
+            color: var(--primary);
             font-weight: 600;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
-                padding: 20px;
+                padding: 30px 20px;
             }
-            
+
             h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
-            
-            nav {
-                padding: 12px 15px;
-            }
-            
+
             nav ul {
-                gap: 12px;
+                padding: 12px 15px;
+                gap: 3px;
             }
-            
+
             nav ul li a {
-                font-size: 0.9em;
-                padding: 6px 10px;
+                font-size: 0.85em;
+                padding: 8px 15px;
             }
-            
+
             main {
-                padding: 20px;
-                margin: 10px;
+                padding: 0 20px;
+                margin: 20px auto;
             }
-            
+
+            .section {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
             .contact-info {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
                 font-size: 0.9em;
             }
-            
+
             .skills-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .cert-list {
                 grid-template-columns: 1fr;
             }
+
+            .objective,
+            .education-item,
+            .experience-item,
+            .project-item {
+                padding: 20px;
+            }
         }
-        
-        @media (max-width: 600px) {
+
+        @media (max-width: 480px) {
             h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
                 font-size: 1.5em;
             }
-            
-            h2 {
-                font-size: 1.3em;
-            }
-            
+
             .header-content {
-                padding: 15px 10px;
+                padding: 20px 15px;
             }
-            
-            nav {
-                padding: 10px;
-            }
-            
+
             nav ul {
                 flex-direction: column;
                 gap: 5px;
-                justify-content: center;
             }
-            
+
             nav ul li {
                 width: 100%;
-                text-align: center;
             }
-            
+
             nav ul li a {
                 display: block;
-                padding: 10px 8px;
-                font-size: 0.85em;
+                text-align: center;
                 width: 100%;
             }
-            
-            body {
-                padding: 0;
-            }
-            
+
             main {
-                margin: 0;
-                border-radius: 0;
-                padding: 15px;
+                margin: 10px auto;
+                padding: 0 15px;
             }
-            
-            .contact-info {
-                font-size: 0.85em;
-                gap: 8px;
-            }
-            
+
             .contact-separator {
                 display: none;
             }
-            
-            .experience-item {
-                padding: 12px;
+        }
+
+        /* Scroll Animation */
+        @media (prefers-reduced-motion: no-preference) {
+            .section {
+                opacity: 0;
+                animation: fadeInUp 0.8s ease-out forwards;
             }
-            
-            .project-item {
-                padding: 15px;
-            }
+
+            .section:nth-child(1) { animation-delay: 0.1s; }
+            .section:nth-child(2) { animation-delay: 0.2s; }
+            .section:nth-child(3) { animation-delay: 0.3s; }
+            .section:nth-child(4) { animation-delay: 0.4s; }
+            .section:nth-child(5) { animation-delay: 0.5s; }
+            .section:nth-child(6) { animation-delay: 0.6s; }
+            .section:nth-child(7) { animation-delay: 0.7s; }
+            .section:nth-child(8) { animation-delay: 0.8s; }
         }
     </style>
 </head>
@@ -399,16 +679,27 @@
         <div class="header-content">
             <h1>Mukesh Mani Tripathi</h1>
             <div class="contact-info">
-                <a href="mailto:mtripathi@students.towson.edu">mtripathi@students.towson.edu</a>
+                <a href="mailto:mtripathi@students.towson.edu">
+                    <i class="fas fa-envelope"></i>
+                    mtripathi@students.towson.edu
+                </a>
                 <span class="contact-separator">|</span>
-                <span>608-xxx-xxx</span>
+                <span><i class="fas fa-phone"></i> 608-xxx-xxx</span>
                 <span class="contact-separator">|</span>
-                <span>Towson, MD 20876</span>
+                <span><i class="fas fa-map-marker-alt"></i> Towson, MD 20876</span>
                 <span class="contact-separator">|</span>
-                <a href="https://www.linkedin.com/in/mukesh-mani-tripathi" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/mukesh-mani-tripathi" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <span class="contact-separator">|</span>
+                <a href="https://github.com/Mukesh-SCS" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
             </div>
         </div>
-        
+
         <nav>
             <ul>
                 <li><a href="#objective">Objective</a></li>
@@ -435,22 +726,22 @@
         <!-- Education Section -->
         <section class="section" id="education">
             <h2>Education</h2>
-            
+
             <div class="education-item">
-                <div class="school-name">Towson University - Towson, MD</div>
                 <div class="degree-title">Master of Science in Computer Science - Cybersecurity</div>
+                <div class="school-name">Towson University - Towson, MD</div>
                 <div class="graduation-date">Expected Graduation: May 2027</div>
             </div>
 
             <div class="education-item">
-                <div class="school-name">University of Wisconsin at Platteville - Platteville, WI</div>
                 <div class="degree-title">Bachelor of Science in Computer Science</div>
+                <div class="school-name">University of Wisconsin at Platteville - Platteville, WI</div>
                 <div class="graduation-date">Graduated: May 2023</div>
             </div>
 
             <div class="education-item">
-                <div class="school-name">North Lake College - Irving, TX</div>
                 <div class="degree-title">Associate of Science, Diploma</div>
+                <div class="school-name">North Lake College - Irving, TX</div>
                 <div class="graduation-date">Graduated: May 2021</div>
             </div>
         </section>
@@ -458,7 +749,7 @@
         <!-- Experience Section -->
         <section class="section" id="experience">
             <h2>Experience</h2>
-            
+
             <div class="experience-item">
                 <div class="job-title">Embedded Software Engineer</div>
                 <div class="company-date"><span class="highlight">RFA Engineering (Client: John Deere)</span> | June 2023 - Dec 2024</div>
@@ -477,11 +768,14 @@
         <!-- Research Experience Section -->
         <section class="section" id="research">
             <h2>Research Experience</h2>
-            
+
             <div class="experience-item">
                 <div class="job-title">Independent Research - Repair2Skill: Embodied AI for Robotic Furniture Repair</div>
                 <div class="company-date"><span class="highlight">Towson University</span> | May 2025 – Present</div>
-                <div style="color: #888; margin-bottom: 15px; font-weight: 500;">Advisor: Prof. Xin Huang</div>
+                <div style="color: var(--gray); margin-bottom: 15px; font-weight: 500; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-user-tie"></i>
+                    Advisor: Prof. Xin Huang
+                </div>
                 <ul>
                     <li>Developing an AI-powered repair planning system integrating MobileNet-based part detection and rule-based repair generation on Raspberry Pi 5.</li>
                     <li>Implemented real-time image capture and detection using Pi Camera and PyTorch, enabling offline repair inference without external APIs.</li>
@@ -496,7 +790,7 @@
         <!-- Technical Skills Section -->
         <section class="section" id="skills">
             <h2>Technical Skills</h2>
-            
+
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
@@ -577,7 +871,7 @@
         <!-- Projects Section -->
         <section class="section" id="projects">
             <h2>Projects</h2>
-            
+
             <div class="project-item">
                 <div class="project-title">Hospital Patient Management System</div>
                 <p class="project-description"><span class="highlight">Technologies:</span> C#, MongoDB, Visual Studio</p>
@@ -606,25 +900,27 @@
         <!-- Certifications Section -->
         <section class="section" id="certifications">
             <h2>Certifications</h2>
-            
+
             <div class="cert-list">
                 <div class="cert-item">
-                    CompTIA+ Security <span class="cert-in-progress">(In Progress)</span>
+                    <span>CompTIA+ Security</span>
+                    <span class="cert-in-progress">In Progress</span>
                 </div>
                 <div class="cert-item">
-                    IBM CyberSecurity <span class="cert-in-progress">(In Progress)</span>
+                    <span>IBM CyberSecurity</span>
+                    <span class="cert-in-progress">In Progress</span>
                 </div>
                 <div class="cert-item">
-                    Embedded Tools and Software Development
+                    <span>Embedded Tools and Software Development</span>
                 </div>
                 <div class="cert-item">
-                    Google Cybersecurity
+                    <span>Google Cybersecurity</span>
                 </div>
                 <div class="cert-item">
-                    Linux and SQL
+                    <span>Linux and SQL</span>
                 </div>
                 <div class="cert-item">
-                    Network Security
+                    <span>Network Security</span>
                 </div>
             </div>
         </section>
@@ -632,7 +928,7 @@
         <!-- Leadership and Involvement Section -->
         <section class="section" id="involvement">
             <h2>Leadership & Involvement</h2>
-            
+
             <ul>
                 <li><span class="highlight">Student Blog Contributor:</span> Published monthly articles on Java and Python for the student tech blog.</li>
                 <li><span class="highlight">Student Programming Group - Member</span> (2019-2021): Active participant in collaborative programming projects and workshops.</li>

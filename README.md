@@ -1,56 +1,56 @@
+<div align="center">
+
 # 👋 Hey there, I'm Mukesh!
 
-<div align="center">
-  
 ### 🤖 AI Enthusiast | 💻 Developer | 🚀 Tech Explorer
 
-*✨ Turning Ideas Into Intelligent Systems | AI-Powered Innovation*
+*✨ Turning Ideas Into Intelligent Systems*
+
+[![GitHub](https://img.shields.io/badge/GitHub-Mukesh--SCS-181717?style=for-the-badge&logo=github)](https://github.com/Mukesh-SCS)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mukesh-mani-tripathi/)
+
+---
+
+</div>
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Mukesh-SCS&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mukesh-SCS&layout=compact&theme=radical&hide_border=true&bg_color=0D1117)
 
 </div>
 
 ---
-
-## 🌟 About Me
-
-I'm passionate about leveraging cutting-edge AI technologies and building innovative solutions. I enjoy exploring the intersection of artificial intelligence, software development, and automation. My work spans across multiple domains including traffic intelligence, music technology, cybersecurity education, and mobile development.
-
 
 ## 💡 Tech Stack
 
-**Languages:** C/C++ • JavaScript • TypeScript • Java • Kotlin • Python
-
-**Specializations:** 
-- 🤖 Artificial Intelligence & Machine Learning
-- 🎮 Interactive Applications
-- 📱 Mobile Development
-- 🔐 Cybersecurity
-- 🎵 Music & Creative Tech
-
-## 🔗 Connect With Me
-
 <div align="center">
 
-[![GitHub followers](https://img.shields.io/github/followers/Mukesh-SCS?style=social)](https://github.com/Mukesh-SCS)
-[![](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/mukesh-mani-tripathi/)
-[![](https://img.shields.io/badge/-Email-0078D4?style=flat&logo=microsoft-outlook)](mailto:tripathimukeshmani@outlook.com)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 </div>
 
+**Specializations:** AI/ML • Mobile Development • Cybersecurity • Creative Tech
+
+---
+
 ## 🎯 Current Focus
 
-- 🧠 Deep diving into advanced AI/ML architectures
-- 🔨 Building developer tools and utilities
-- 📚 Contributing to open-source projects
-- 🚀 Exploring innovative applications of AI
-
-## ⭐ If You Find My Work Interesting
-
-Feel free to explore my repositories, star projects you like, and reach out for collaborations. I'm always excited to connect with fellow developers and AI enthusiasts!
+🧠 Advanced AI/ML architectures | 🔨 Developer tools | 📚 Open-source contributions
 
 ---
 
 <div align="center">
-  
+
+**⭐ Star my repos if you find them interesting!**
+
 **Made with ❤️ by Mukesh**
-  
+
 </div>

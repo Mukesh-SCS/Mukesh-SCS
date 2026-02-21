@@ -1,56 +1,61 @@
-<div align="center">
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3200&pause=800&color=6366F1&center=true&vCenter=true&width=520&lines=Hey%2C+I'm+Mukesh+%F0%9F%91%8B;AI+Enthusiast+%E2%80%A2+Developer+%E2%80%A2+Tech+Explorer;Turning+ideas+into+intelligent+systems" alt="Typing intro" />
+</p>
 
-# 👋 Hey there, I'm Mukesh!
-
-### 🤖 AI Enthusiast | 💻 Developer | 🚀 Tech Explorer
-
-*✨ Turning Ideas Into Intelligent Systems*
-
-[![GitHub](https://img.shields.io/badge/GitHub-Mukesh--SCS-181717?style=for-the-badge&logo=github)](https://github.com/Mukesh-SCS)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mukesh-mani-tripathi/)
+<p align="center">
+  <a href="https://github.com/Mukesh-SCS"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://www.linkedin.com/in/mukesh-mani-tripathi/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+</p>
 
 ---
 
-</div>
+### What I do
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Mukesh-SCS&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mukesh-SCS&layout=compact&theme=radical&hide_border=true&bg_color=0D1117)
-
-</div>
+I build things at the intersection of **AI/ML**, **developer tools**, and **creative tech**.  
+Focused on advanced architectures, open-source, and making tech more accessible.
 
 ---
 
-## 💡 Tech Stack
+### Tech & tools
 
-<div align="center">
+<table>
+<tr>
+<td align="center" width="96">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="40" height="40" alt="C++" />
+  <br/><sub>C++</sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
+  <br/><sub>JavaScript</sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" />
+  <br/><sub>TypeScript</sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40" alt="Java" />
+  <br/><sub>Java</sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" />
+  <br/><sub>Python</sub>
+</td>
+</tr>
+</table>
 
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-</div>
-
-**Specializations:** AI/ML • Mobile Development • Cybersecurity • Creative Tech
+**Areas:** AI/ML · Mobile · Cybersecurity · Creative tech
 
 ---
 
-## 🎯 Current Focus
+### Right now
 
-🧠 Advanced AI/ML architectures | 🔨 Developer tools | 📚 Open-source contributions
+- 🧠 Advanced AI/ML architectures  
+- 🔨 Developer tools & automation  
+- 📚 Open-source contributions  
 
 ---
 
-<div align="center">
-
-**⭐ Star my repos if you find them interesting!**
-
-**Made with ❤️ by Mukesh**
-
-</div>
+<p align="center">
+  <sub>If something here resonates, drop a ⭐ on the repos you like.</sub><br/>
+  <sub><b>Mukesh</b></sub>
+</p>
